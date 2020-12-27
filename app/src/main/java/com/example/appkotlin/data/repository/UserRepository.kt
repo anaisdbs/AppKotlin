@@ -14,8 +14,8 @@ class UserRepository(
 
     }
 
-    fun getUser(email: String) : User? {
-        val userLocal = databaseDao.findByName(email)
+    fun getUser(email: String, password: String) : User? {
+        val userLocal = databaseDao.findByName(email, password)
         return userLocal?.toEntity()
     }
 }
