@@ -1,5 +1,6 @@
 package com.example.appkotlin.presentation.main
 
+import android.content.Intent
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -34,6 +35,10 @@ class MainViewModel(
                 loginLiveData.value = loginStatus
             }
         }
+        //counter.value = (counter.value ?: 0) + 1
+    }
+
+    fun onClickedCreate() {
         //counter.value = (counter.value ?: 0) + 1
     }
 
