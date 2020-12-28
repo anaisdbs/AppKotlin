@@ -3,7 +3,9 @@ package com.example.appkotlin.presentation.recyclerview
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager.VERTICAL
 import com.example.appkotlin.R
 import com.example.appkotlin.data.remote.RecyclerData
 import com.example.appkotlin.data.remote.RecyclerList
@@ -31,21 +33,15 @@ class RecyclerViewActivity : AppCompatActivity() {
             layoutManager = LinearLayoutManager(this@RecyclerViewActivity)
             recyclerViewAdapter = RecyclerViewAdapter()
             adapter = recyclerViewAdapter
+
+            val decoration = DividerItemDecoration(applicationContext, VERTICAL)
+            addItemDecoration(decoration)
+
+
         }
     }
 
-    fun createData(){ //create static data to test recyclerview
-        /*val item = ArrayList<RecyclerData>()
-
-        item.add("Java")
-        item.add("C++")
-        item.add("Android")
-        item.add("iOS")
-        item.add("PHP")
-        item.add("Kotlin")
-
-        recyclerViewAdapter.setListData(item)
-        recyclerViewAdapter.notifyDataSetChanged()*/
+    fun createData(){
 
         val retroInstance = RetroInstance.getRetroInstance().create(RetroService::class.java)
         val call = retroInstance.getDataFromApi("newyork")
