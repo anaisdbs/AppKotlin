@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.Observer
 import com.example.appkotlin.R
+import com.example.appkotlin.presentation.recyclerview.RecyclerViewActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.android.ext.android.inject
@@ -27,6 +28,8 @@ class MainActivity : AppCompatActivity() {
                                 dialog, which ->  dialog.dismiss()
                         }
                         .show()
+                    val intent3 = Intent(this, RecyclerViewActivity::class.java)
+                    startActivity(intent3)
                     //TODO Navigate
                 }
                 LoginError -> {
