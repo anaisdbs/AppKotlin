@@ -23,7 +23,7 @@ class MainViewModel(
     fun onClickedLogin(emailUser: String, passwordUser: String) {
         viewModelScope.launch(Dispatchers.IO) {
             //coroutine fait du multitache, opération lourde thread background
-            createUserUseCase.invoke(User("mail", "mdp"))
+            //createUserUseCase.invoke(User("mail", "mdp"))
             val user = getUserUseCase.invoke(emailUser, passwordUser)
             val loginStatus = if(user != null){
                 LoginSuccess(user.email, user.password)

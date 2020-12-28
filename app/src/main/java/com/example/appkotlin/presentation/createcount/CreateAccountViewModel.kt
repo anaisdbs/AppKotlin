@@ -22,7 +22,7 @@ class CreateAccountViewModel(
 
     fun onClickedCreate(emailNewUser: String, passwordNewUser: String) {
         viewModelScope.launch(Dispatchers.IO) {
-            //val otherUser = getUserUseCase.invoke(emailNewUser, passwordNewUser)
+            val otherUser = getUserUseCase.invoke(emailNewUser, passwordNewUser)
             //if (otherUser == null){
                 val newUser = createUserUseCase.invoke(User(emailNewUser, passwordNewUser))
                 val createStatus = if(newUser != null){
