@@ -46,6 +46,7 @@ class RecyclerViewActivity : AppCompatActivity() {
 
     fun createData(){
 
+
        val viewModel = ViewModelProviders.of(this).get(RecyclerActivityViewModel::class.java)
         viewModel.getRecyclerListDataObserver().observe(this, Observer<RecyclerList>{
             if(it != null){
@@ -56,6 +57,10 @@ class RecyclerViewActivity : AppCompatActivity() {
                 Toast.makeText(this@RecyclerViewActivity, "Error in getting data from api.", Toast.LENGTH_LONG).show()
             }
         })
-        viewModel.makeApiCall()
+
+        search_button.setOnClickListener{
+            viewModel.makeApiCall(search.text.toString())
+        }
+
     }
 }

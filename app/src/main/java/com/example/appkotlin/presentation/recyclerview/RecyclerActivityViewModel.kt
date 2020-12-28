@@ -21,9 +21,9 @@ class RecyclerActivityViewModel: ViewModel() {
         return recyclerListData
     }
 
-    fun makeApiCall(){
+    fun makeApiCall(input: String){
         val retroInstance = RetroInstance.getRetroInstance().create(RetroService::class.java)
-        val call = retroInstance.getDataFromApi("tetris")
+        val call = retroInstance.getDataFromApi(input)
         call.enqueue(object : retrofit2.Callback<RecyclerList>{
             override fun onResponse(call: Call<RecyclerList>, response: Response<RecyclerList>) {
                 if(response.isSuccessful) {
