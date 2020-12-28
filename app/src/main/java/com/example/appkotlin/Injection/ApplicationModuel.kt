@@ -9,6 +9,7 @@ import com.example.appkotlin.domain.usecase.CreateUserUseCase
 import com.example.appkotlin.domain.usecase.GetUserUseCase
 import com.example.appkotlin.presentation.createcount.CreateAccountViewModel
 import com.example.appkotlin.presentation.main.MainViewModel
+import com.example.appkotlin.presentation.recyclerview.RecyclerViewAdapter
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 
@@ -17,6 +18,7 @@ import org.koin.dsl.module
 val presentationModule = module {
     factory { MainViewModel(get(), get()) } //factory, quand on change de vue il se détruit puis se recrée
     factory { CreateAccountViewModel(get(), get()) }
+    //factory { RecyclerViewAdapter() }
 }
 
 val domainModule = module {

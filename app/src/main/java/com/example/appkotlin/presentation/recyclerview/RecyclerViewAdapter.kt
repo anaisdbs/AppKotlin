@@ -5,14 +5,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appkotlin.R
+import com.example.appkotlin.data.remote.RecyclerData
 import kotlinx.android.synthetic.main.activity_recycler_view.*
 import kotlinx.android.synthetic.main.recycleview_row.view.*
 
 class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>()
 {
-    var items = ArrayList<String>()
+    var items = ArrayList<RecyclerData>()
 
-    fun setListData(data: ArrayList<String>){ //set list data from the outside
+    fun setListData(data: ArrayList<RecyclerData>){ //set list data from the outside
         this.items = data
     }
 
@@ -34,8 +35,8 @@ class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolde
 
         val tvTitle = view.tvTitle
 
-        fun bind (title: String){
-            tvTitle.text = title
+        fun bind (data: RecyclerData){
+            tvTitle.text = data.name
 
         }
 
