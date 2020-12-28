@@ -39,13 +39,10 @@ class RecyclerViewActivity : AppCompatActivity() {
 
             val decoration = DividerItemDecoration(applicationContext, VERTICAL)
             addItemDecoration(decoration)
-
-
         }
     }
 
     fun createData(){
-
 
        val viewModel = ViewModelProviders.of(this).get(RecyclerActivityViewModel::class.java)
         viewModel.getRecyclerListDataObserver().observe(this, Observer<RecyclerList>{
@@ -54,7 +51,7 @@ class RecyclerViewActivity : AppCompatActivity() {
                 recyclerViewAdapter.notifyDataSetChanged()
 
             }else{
-                Toast.makeText(this@RecyclerViewActivity, "Error in getting data from api.", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@RecyclerViewActivity, "Error with api, don't find data", Toast.LENGTH_LONG).show()
             }
         })
 

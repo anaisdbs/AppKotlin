@@ -22,8 +22,6 @@ class CreateAccountViewModel(
 
     fun onClickedCreate(emailNewUser: String, passwordNewUser: String) {
         viewModelScope.launch(Dispatchers.IO) {
-            val otherUser = getUserUseCase.invoke(emailNewUser, passwordNewUser)
-            //if (otherUser == null){
                 val newUser = createUserUseCase.invoke(User(emailNewUser, passwordNewUser))
                 val createStatus = if(newUser != null){
                     CreateSuccess(emailNewUser, passwordNewUser)
@@ -31,11 +29,9 @@ class CreateAccountViewModel(
                     CreateError
                 }
                 withContext(Dispatchers.Main){
-                    //on repasse sur le bon thread pour maj interface utilisateur
+                    //on repasse sur le bon thread pour mettre à jour l'interface utilisateur
                     createLiveData.value = createStatus
                 }
-            //}
-
         }
     }
 }

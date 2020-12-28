@@ -3,6 +3,7 @@ package com.example.appkotlin.presentation.main
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import androidx.lifecycle.Observer
 import com.example.appkotlin.R
 import com.example.appkotlin.presentation.recyclerview.RecyclerViewActivity
@@ -22,20 +23,19 @@ class MainActivity : AppCompatActivity() {
             when(it){
                 is LoginSuccess -> {
                     MaterialAlertDialogBuilder(this)
-                        .setTitle("Validé")
-                        .setMessage("Compte connu")
+                        .setTitle("Account known")
+                        .setMessage("You will access to the app")
                         .setPositiveButton("OK"){
-                                dialog, which ->  dialog.dismiss()
+                                dialog, which ->  val intent3 = Intent(this, RecyclerViewActivity::class.java)
+                            startActivity(intent3)
                         }
                         .show()
-                    val intent3 = Intent(this, RecyclerViewActivity::class.java)
-                    startActivity(intent3)
-                    //TODO Navigate
+
                 }
                 LoginError -> {
                     MaterialAlertDialogBuilder(this)
-                        .setTitle("Erreur")
-                        .setMessage("Compte inconnu")
+                        .setTitle("Error")
+                        .setMessage("Account unknown")
                         .setPositiveButton("OK"){
                             dialog, which ->  dialog.dismiss()
                         }

@@ -6,16 +6,19 @@ import androidx.lifecycle.ViewModel
 import com.example.appkotlin.data.remote.RecyclerList
 import com.example.appkotlin.data.remote.api.RetroInstance
 import com.example.appkotlin.data.remote.api.RetroService
+import com.example.appkotlin.presentation.main.LoginStatus
 import retrofit2.Call
 import retrofit2.Response
 
 class RecyclerActivityViewModel: ViewModel() {
 
-    lateinit var recyclerListData: MutableLiveData<RecyclerList>
+    val recyclerListData: MutableLiveData<RecyclerList> = MutableLiveData()
 
-    init {
+    //val loginLiveData : MutableLiveData<LoginStatus> = MutableLiveData()
+
+    /*init {
         recyclerListData = MutableLiveData()
-    }
+    }*/
 
     fun getRecyclerListDataObserver(): MutableLiveData<RecyclerList>{
         return recyclerListData

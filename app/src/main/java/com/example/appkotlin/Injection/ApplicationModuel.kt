@@ -18,7 +18,6 @@ import org.koin.dsl.module
 val presentationModule = module {
     factory { MainViewModel(get(), get()) } //factory, quand on change de vue il se détruit puis se recrée
     factory { CreateAccountViewModel(get(), get()) }
-    //factory { RecyclerViewAdapter() }
 }
 
 val domainModule = module {
