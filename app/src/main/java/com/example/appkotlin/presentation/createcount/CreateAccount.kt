@@ -53,7 +53,7 @@ class CreateAccount : AppCompatActivity() {
 
             createAccountViewModel.createLiveData.observe(this, Observer {
             when(it){
-                is CreateSuccess -> {
+                is CreateSuccess -> {//si succès on affiche popup de validation et navigation vers login
                     MaterialAlertDialogBuilder(this)
                         .setTitle("Account create")
                         .setMessage("You can connect")
@@ -63,18 +63,17 @@ class CreateAccount : AppCompatActivity() {
                         }
                         .show()
                 }
-                CreateError -> {
+                CreateError -> {//si erreur on affiche pop d'erreur
                     MaterialAlertDialogBuilder(this)
                         .setTitle("There is an error")
                         .setPositiveButton("OK"){
                                 dialog, which ->  dialog.dismiss()
                         }
                         .show()
-                }//afficher popup d'erreur
+                }
             }
 
         })
-           // createCountViewModel.onClickedCreate(email_create_edit.text.toString().trim(), password_create_edit.text.toString())
         }
 
     }

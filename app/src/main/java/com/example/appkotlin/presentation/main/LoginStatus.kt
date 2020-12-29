@@ -1,6 +1,5 @@
 package com.example.appkotlin.presentation.main
 
-import android.provider.ContactsContract
 
 sealed class LoginStatus
 

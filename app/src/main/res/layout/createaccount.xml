@@ -76,9 +76,9 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/create_button"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/spacing_null"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="@dimen/spacing_triple"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

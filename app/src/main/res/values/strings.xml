@@ -7,4 +7,5 @@
     <string name="search">SEARCH</string>
     <string name="access_repositories">YOU WILL ACCESS TO GITHUB REPOSITORIES</string>
     <string name="login">Login</string>
+    <string name="enter_your_research">Enter your research</string>
 </resources>

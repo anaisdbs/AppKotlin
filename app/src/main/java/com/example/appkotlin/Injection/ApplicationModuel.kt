@@ -16,7 +16,7 @@ import org.koin.dsl.module
 // fichier qui crée toutes nos classes
 
 val presentationModule = module {
-    factory { MainViewModel(get(), get()) } //factory, quand on change de vue il se détruit puis se recrée
+    factory { MainViewModel(get()) } //factory, quand on change de vue il se détruit puis se recrée
     factory { CreateAccountViewModel(get(), get()) }
 }
 

@@ -22,14 +22,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/spacing_normal"
-        android:textSize="15sp"
+        android:textSize="@dimen/middle_sp"
         />
 
     <TextView android:id="@+id/tvDesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/spacing_normal"
-        android:textSize="10sp"
+        android:textSize="@dimen/low_sp"
         android:maxLines="3"/>
 
     </LinearLayout>

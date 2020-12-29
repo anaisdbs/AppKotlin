@@ -27,7 +27,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:text="@string/access_repositories"
         android:textStyle="bold"
-        android:textSize="15dp"
+        android:textSize="@dimen/middle_sp"
         android:textAlignment="center"
         android:textColor="@color/black"
         />
@@ -76,7 +76,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/login_button"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/spacing_null"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/spacing_double"
         app:layout_constraintBottom_toTopOf="@+id/create_account_button"

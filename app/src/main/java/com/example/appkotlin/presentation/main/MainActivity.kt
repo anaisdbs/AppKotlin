@@ -3,7 +3,6 @@ package com.example.appkotlin.presentation.main
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
 import androidx.lifecycle.Observer
 import com.example.appkotlin.R
 import com.example.appkotlin.presentation.recyclerview.RecyclerViewActivity
@@ -52,17 +51,8 @@ class MainActivity : AppCompatActivity() {
         create_account_button.setOnClickListener{
             val intent = Intent(this, CreateAccount::class.java)
             startActivity(intent)
-            //mainViewModel.onClickedCreate()
         }
 
-        /*mainViewModel.text.observe(this, Observer {
-            main_text.text = it
-            // value -> main_text.text = value --> autre option
-        })*/
-
-       /* mainViewModel.counter.observe(this, Observer {
-            value -> main_text.text = value.toString()
-        })*/
 
     }
 }

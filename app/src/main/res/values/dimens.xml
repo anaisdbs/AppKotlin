@@ -3,7 +3,11 @@
     <dimen name="spacing_normal">10dp</dimen>
     <dimen name="spacing_half">15dp</dimen>
     <dimen name="spacing_double">20dp</dimen>
+    <dimen name="spacing_triple">30dp</dimen>
     <dimen name="spacing_a_lot">200dp</dimen>
     <dimen name="logo_width">146dp</dimen>
     <dimen name="logo_height">400dp</dimen>
+    <dimen name="middle_sp">15sp</dimen>
+    <dimen name="low_sp">10sp</dimen>
+    <dimen name="spacing_null">0dp</dimen>
 </resources>

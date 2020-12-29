@@ -6,9 +6,6 @@ import androidx.lifecycle.viewModelScope
 import com.example.appkotlin.domain.entity.User
 import com.example.appkotlin.domain.usecase.CreateUserUseCase
 import com.example.appkotlin.domain.usecase.GetUserUseCase
-import com.example.appkotlin.presentation.main.LoginError
-import com.example.appkotlin.presentation.main.LoginStatus
-import com.example.appkotlin.presentation.main.LoginSuccess
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -22,7 +19,7 @@ class CreateAccountViewModel(
 
     fun onClickedCreate(emailNewUser: String, passwordNewUser: String) {
         viewModelScope.launch(Dispatchers.IO) {
-                val newUser = createUserUseCase.invoke(User(emailNewUser, passwordNewUser))
+                val newUser = createUserUseCase.invoke(User(emailNewUser, passwordNewUser)) //création du nouvel utilisateur
                 val createStatus = if(newUser != null){
                     CreateSuccess(emailNewUser, passwordNewUser)
                 }else{

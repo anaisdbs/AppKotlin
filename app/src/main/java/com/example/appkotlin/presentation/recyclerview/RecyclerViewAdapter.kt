@@ -8,14 +8,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.appkotlin.R
 import com.example.appkotlin.data.remote.RecyclerData
-import kotlinx.android.synthetic.main.activity_recycler_view.*
 import kotlinx.android.synthetic.main.recycleview_row.view.*
 
 class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>()
 {
     var items = ArrayList<RecyclerData>()
 
-    fun setListData(data: ArrayList<RecyclerData>){ //set list data from the outside
+    fun setListData(data: ArrayList<RecyclerData>){
         this.items = data
     }
 
