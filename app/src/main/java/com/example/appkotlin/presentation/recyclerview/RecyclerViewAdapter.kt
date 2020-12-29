@@ -55,7 +55,6 @@ class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolde
                 .fallback(R.drawable.default_thumb)
                 .into(imageThumb)
 
-
         }
 
     }

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">AppKotlin</string>
+    <string name="create_account">CREATE ACCOUNT</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="search_repositories">Search repositories on GitHub</string>
+    <string name="search">SEARCH</string>
+    <string name="access_repositories">YOU WILL ACCESS TO GITHUB REPOSITORIES</string>
+    <string name="login">Login</string>
 </resources>

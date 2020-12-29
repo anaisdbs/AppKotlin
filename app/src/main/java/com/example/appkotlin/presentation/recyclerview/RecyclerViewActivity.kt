@@ -44,7 +44,8 @@ class RecyclerViewActivity : AppCompatActivity() {
 
     fun createData(){
 
-       val viewModel = ViewModelProviders.of(this).get(RecyclerActivityViewModel::class.java)
+        var viewModel = ViewModelProvider(this).get(RecyclerActivityViewModel::class.java)
+       //val viewModel = ViewModelProviders.of(this).get(RecyclerActivityViewModel::class.java)
         viewModel.getRecyclerListDataObserver().observe(this, Observer<RecyclerList>{
             if(it != null){
                 recyclerViewAdapter.setListData(it.items)
@@ -56,7 +57,7 @@ class RecyclerViewActivity : AppCompatActivity() {
         })
 
         search_button.setOnClickListener{
-            viewModel.makeApiCall(search.text.toString())
+            viewModel.makeApiCall(search_edit.text.toString())
         }
 
     }

@@ -7,11 +7,37 @@
     android:padding="@dimen/spacing_normal"
     tools:context=".presentation.main.CreateAccount">
 
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/logo"
+        android:layout_width="@dimen/logo_width"
+        android:layout_height="@dimen/logo_height"
+        app:layout_constraintBottom_toTopOf="@+id/title_create"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/github_logo" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_create"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_double"
+        app:layout_constraintBottom_toTopOf="@id/create_email_input_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/create_account"
+        android:textStyle="bold"
+        android:textSize="@dimen/spacing_double"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/create_email_input_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="email"
+        android:layout_marginTop="@dimen/spacing_a_lot"
+        android:hint="@string/email"
         app:layout_constraintVertical_chainStyle="packed"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,7 +49,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
-
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -32,7 +57,7 @@
         android:id="@+id/create_password_input_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="password"
+        android:hint="@string/password"
         android:layout_marginTop="@dimen/spacing_normal"
         app:layout_constraintTop_toBottomOf="@+id/create_email_input_layout"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,9 +83,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/create_password_input_layout"
-        android:text="create account"
+        android:text="@string/create_account"
         />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
